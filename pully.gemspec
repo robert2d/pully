@@ -15,6 +15,7 @@ Gem::Specification.new do |gem|
   gem.homepage      = ''
 
   gem.add_runtime_dependency 'git'
+  gem.add_runtime_dependency 'uri-ssh_git'
 
   gem.add_development_dependency 'rspec'
   gem.add_development_dependency 'rake'
