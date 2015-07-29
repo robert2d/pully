@@ -3,10 +3,13 @@ describe Pully do
 
   before do
     allow_any_instance_of(Git::Lib).to receive(:command).and_return('master')
+    allow(RbConfig::CONFIG).to receive(:[]).and_return(os)
   end
 
   context 'https URL' do
     describe '#open' do
+      let(:os) { 'darwin' }
+
       it 'opens the url on OSX' do
         expect_any_instance_of(subject).to receive(:system).with(
           'open https://github.com/robert2d/pully/compare/master?expand=1'
@@ -21,6 +24,8 @@ describe Pully do
 
   context 'git URL' do
     describe '#open' do
+      let(:os) { 'darwin' }
+
       it 'opens the url on OSX' do
         expect_any_instance_of(subject).to receive(:system).with(
           'open https://github.com/robert2d/pully/compare/master?expand=1'
@@ -41,8 +46,9 @@ describe Pully do
     end
 
     context 'windows' do
+      let(:os) { 'mswin' }
+
       it 'opens correctly' do
-        allow(RbConfig::CONFIG).to receive(:[]).and_return('mswin')
         expect_any_instance_of(subject).to receive(:system).with(
           'start https://github.com/robert2d/pully/compare/master?expand=1'
         )
@@ -51,8 +57,9 @@ describe Pully do
     end
 
     context 'linux' do
+      let(:os) { 'bsd' }
+
       it 'opens correctly' do
-        allow(RbConfig::CONFIG).to receive(:[]).and_return('bsd')
         expect_any_instance_of(subject).to receive(:system).with(
           'xdg-open https://github.com/robert2d/pully/compare/master?expand=1'
         )
