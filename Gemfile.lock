@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    pully (0.0.1)
+    pully-cli (0.0.1)
       git
       uri-ssh_git
 
@@ -62,7 +62,7 @@ PLATFORMS
 DEPENDENCIES
   codeclimate-test-reporter
   pry
-  pully!
+  pully-cli!
   rake
   rspec
   rubocop
