@@ -1,13 +1,11 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-
-require File.expand_path('../version.rb', __FILE__)
-gem_version = local_version
+require 'pully/version'
 
 Gem::Specification.new do |gem|
   gem.name          = 'pully'
-  gem.version       = gem_version
+  gem.version       = Robot::VERSION
   gem.authors       = ['Dave Robertson']
   gem.email         = ['david.andrew.robertson.nz@gmail.com']
   gem.description   = 'Consumer Data EMR Tool'
