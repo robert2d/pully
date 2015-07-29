@@ -2,6 +2,8 @@ require 'rspec'
 require 'pry'
 require 'simplecov'
 require 'webmock/rspec'
+require 'codeclimate-test-reporter'
+CodeClimate::TestReporter.start
 
 SimpleCov.coverage_dir('target/coverage')
 
