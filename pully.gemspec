@@ -5,7 +5,7 @@ require 'pully/version'
 
 Gem::Specification.new do |gem|
   gem.name          = 'pully'
-  gem.version       = Robot::VERSION
+  gem.version       = Pully::VERSION
   gem.authors       = ['Dave Robertson']
   gem.email         = ['david.andrew.robertson.nz@gmail.com']
   gem.description   = 'Consumer Data EMR Tool'
