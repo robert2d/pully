@@ -4,14 +4,15 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'pully/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = 'pully'
+  gem.name          = 'pully-cli'
   gem.version       = Pully::VERSION
   gem.version       = "#{gem.version}-alpha-#{ENV['TRAVIS_BUILD_NUMBER']}" if ENV['TRAVIS']
   gem.authors       = ['Dave Robertson']
   gem.email         = ['david.andrew.robertson.nz@gmail.com']
   gem.description   = 'Consumer Data EMR Tool'
   gem.summary       = 'Pull request creator on github or enterprise github'
-  gem.homepage      = ''
+  gem.homepage      = 'https://github.com/robert2d/pully'
+  gem.license       = 'MIT'
 
   gem.add_runtime_dependency 'git'
   gem.add_runtime_dependency 'uri-ssh_git'
