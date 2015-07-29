@@ -1,5 +1,4 @@
 describe Pully do
-
   subject { described_class }
 
   before do
@@ -35,7 +34,6 @@ describe Pully do
   end
 
   describe 'other OS' do
-
     before do
       allow_any_instance_of(Git::Base).to receive(:config).and_return(
         'remote.origin.url' => 'https://github.com/robert2d/pully.git'
