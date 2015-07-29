@@ -2,7 +2,7 @@ describe Pully do
   subject { described_class }
 
   before do
-    allow(Git::Lib).to receive(:command).and_return('master')
+    allow_any_instance_of(Git::Lib).to receive(:command).and_return('master')
   end
 
   context 'https URL' do
