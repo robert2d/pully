@@ -20,7 +20,6 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'rubocop'
   gem.add_development_dependency 'pry'
   gem.add_development_dependency 'simplecov'
-  gem.add_development_dependency 'webmock'
   gem.add_development_dependency 'codeclimate-test-reporter'
 
   gem.files         = `git ls-files`.split($INPUT_RECORD_SEPARATOR)
