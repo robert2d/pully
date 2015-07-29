@@ -1,7 +1,6 @@
 # Don't want to expose task that pushes to rubygems
 # so load gem_helper functions instead
 require 'bundler'
-require './version'
 
 require 'rspec/core'
 require 'rspec/core/rake_task'
