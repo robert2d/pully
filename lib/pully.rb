@@ -14,7 +14,7 @@ class Pully
     dir += '/..' until File.directory?("#{dir}/.git")
     @git = Git.open(dir)
     @branch = Git::Lib.new.send(:command, 'rev-parse --abbrev-ref HEAD')
-    @remote = process_remote(git.config['remote.origin.url'])
+    @remote = process_remote(@git.config['remote.origin.url'])
   end
 
   def open
@@ -35,6 +35,6 @@ class Pully
     return remote
   rescue URI::InvalidURIError
     uri = URI::SshGit.parse(remote)
-    return "https://#{uri.host}#{uri.path}"
+    return "https://#{uri.host}/#{uri.path.sub(/^\//, '')}"
   end
 end

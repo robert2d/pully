@@ -19,6 +19,16 @@ describe Pully do
         )
         subject.open
       end
+
+      it 'opens company url' do
+        expect_any_instance_of(subject).to receive(:system).with(
+          'open https://github.com/NuffieProductions/CE-Service/compare/master?expand=1'
+        )
+        expect_any_instance_of(Git::Base).to receive(:config).and_return(
+          'remote.origin.url' => 'git@github.com:NuffieProductions/CE-Service.git'
+        )
+        subject.open
+      end
     end
   end
 
