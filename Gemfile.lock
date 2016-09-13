@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    pully-cli (0.0.1)
+    pully-cli (0.0.2)
       git
       uri-ssh_git
 
@@ -16,7 +16,7 @@ GEM
     coderay (1.1.0)
     diff-lcs (1.2.5)
     docile (1.1.5)
-    git (1.2.9.1)
+    git (1.3.0)
     json (1.8.3)
     method_source (0.8.2)
     parser (2.2.2.6)
@@ -54,7 +54,7 @@ GEM
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.0)
     slop (3.6.0)
-    uri-ssh_git (0.1.1)
+    uri-ssh_git (1.0.0)
 
 PLATFORMS
   ruby
@@ -69,4 +69,4 @@ DEPENDENCIES
   simplecov
 
 BUNDLED WITH
-   1.10.5
+   1.10.6

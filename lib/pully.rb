@@ -35,6 +35,6 @@ class Pully
     return remote
   rescue URI::InvalidURIError
     uri = URI::SshGit.parse(remote)
-    return "https://#{uri.host}/#{uri.path.sub(/^\//, '')}"
+    return "https://#{uri.host}/#{uri.path.sub(%r{^\/}, '')}"
   end
 end
