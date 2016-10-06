@@ -14,7 +14,7 @@ Gem::Specification.new do |gem|
   gem.license       = 'MIT'
 
   gem.add_runtime_dependency 'git'
-  gem.add_runtime_dependency 'uri-ssh_git'
+  gem.add_runtime_dependency 'uri-ssh_git', '>= 1.0', '< 2.0'
 
   gem.add_development_dependency 'rspec'
   gem.add_development_dependency 'rake'
